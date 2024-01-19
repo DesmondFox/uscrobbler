@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "uscrobbler"
 include(":app")
- 
+include(":lastfm")

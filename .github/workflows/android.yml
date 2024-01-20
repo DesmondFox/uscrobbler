@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - run: echo "LFM_APIKEY=$LFM_APIKEY" >> keys.properties
+    - run: echo "\nLFM_SHARED_SECRET=$LFM_SHARED_SECRET" >> keys.properties
+
     - uses: actions/checkout@v3
     - name: set up JDK 11
       uses: actions/setup-java@v3

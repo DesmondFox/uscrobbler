@@ -1,3 +1,6 @@
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -5,6 +8,10 @@ plugins {
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
 }
+
+val apikeyPropertiesFile = rootProject.file("keys.properties")
+val apikeyProperties = Properties()
+apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
 
 android {
     namespace = "com.di3go.uscrobbler"
@@ -21,6 +28,9 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField("String", "LFM_APIKEY", "\"${apikeyProperties.getProperty("LFM_APIKEY")}\"")
+        buildConfigField("String", "LFM_SHARED_SECRET", "\"${apikeyProperties.getProperty("LFM_SHARED_SECRET")}\"")
     }
 
     buildTypes {

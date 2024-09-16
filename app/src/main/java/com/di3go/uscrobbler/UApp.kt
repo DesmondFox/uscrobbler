@@ -2,10 +2,12 @@ package com.di3go.uscrobbler
 
 import android.app.Application
 import android.os.StrictMode
+import dagger.hilt.android.HiltAndroidApp
 import de.umass.lastfm.Caller
 import java.io.File
 import java.util.logging.Level
 
+@HiltAndroidApp
 class UApp: Application() {
     override fun onCreate() {
         super.onCreate()

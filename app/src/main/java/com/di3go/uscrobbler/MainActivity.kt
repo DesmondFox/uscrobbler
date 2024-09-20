@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.di3go.uscrobbler.screens.connect.ConnectPage
+import com.di3go.uscrobbler.screens.lastfm_login.LastFMLoginScreen
 import com.di3go.uscrobbler.ui.theme.UscrobblerTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,6 +27,7 @@ class MainActivity : ComponentActivity() {
                     enterTransition = { slideInHorizontally() },
                 ) {
                     composable<ConnectPageObject> { ConnectPage(navController) }
+                    composable<LastFMLoginScreenObject> { LastFMLoginScreen(navController) }
                 }
             }
         }

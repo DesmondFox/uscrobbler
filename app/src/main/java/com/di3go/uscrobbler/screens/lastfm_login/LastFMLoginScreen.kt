@@ -1,5 +1,6 @@
 package com.di3go.uscrobbler.screens.lastfm_login
 
+import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.compose.foundation.layout.padding
@@ -17,9 +18,9 @@ import com.di3go.uscrobbler.Contract
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun LastFMLoginScreen(navController: NavController) {
+fun LastFMLoginScreen(navController: NavController, token: String) {
     val vm = hiltViewModel<LastFMLoginVM>()
-    val webViewClient: WebViewClient = WebViewClient()
+    val args = navController.currentBackStackEntry?.arguments
 
     Scaffold(
         topBar = {
@@ -31,17 +32,7 @@ fun LastFMLoginScreen(navController: NavController) {
         Surface(
             modifier = Modifier.padding(it)
         ) {
-            AndroidView(factory = { context ->
-                WebView(context).apply {
-                    this.layoutParams = android.view.ViewGroup.LayoutParams(
-                        android.view.ViewGroup.LayoutParams.MATCH_PARENT,
-                        android.view.ViewGroup.LayoutParams.MATCH_PARENT
-                    )
-                    this.webViewClient = webViewClient
-                }
-            }, update = { webView ->
-                webView.loadUrl(Contract.LASTFM_LOGIN_URL)
-            })
+            Text("Token $token")
         }
     }
 }

@@ -6,4 +6,6 @@ import kotlinx.serialization.Serializable
 object ConnectPageObject
 
 @Serializable
-object LastFMLoginScreenObject
+object LastFMLoginScreenObject {
+    var token: String = ""
+}

@@ -33,7 +33,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data android:scheme="uscrobbler" />
-                <data android:host="lastfm" />
+                <data android:host="lastfm_success" />
             </intent-filter>
         </activity>
     </application>

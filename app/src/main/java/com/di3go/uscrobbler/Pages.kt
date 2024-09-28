@@ -9,3 +9,6 @@ object ConnectPageObject
 object LastFMLoginScreenObject {
     var token: String = ""
 }
+
+@Serializable
+object HomeScreenObject

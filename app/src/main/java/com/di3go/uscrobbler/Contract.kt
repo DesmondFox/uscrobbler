@@ -6,4 +6,6 @@ object Contract {
     const val LASTFM_DEEPLINK_PATTERN = "${USCROBBLER_SCHEME}://lastfm_success?token={token}"
     const val LASTFM_LOGIN_URL = "https://www.last.fm/api/auth/?api_key=${BuildConfig.LFM_APIKEY}" +
             "&cb=${USCROBBLER_SCHEME}://lastfm_success"
+
+    const val SECURED_PREFS_FILENAME = "uscrobbler_prefs"
 }

@@ -1,18 +1,17 @@
-package com.di3go.uscrobbler
+package com.di3go.uscrobbler.data.providers
 
-import android.util.Log
 import de.umass.lastfm.Caller
 import javax.inject.Inject
 import javax.inject.Singleton
 
-interface LastFMRepository {
+interface LastFMProvider {
     fun saveToken(token: String)
 }
 
 @Singleton
-class LastFMRepositoryImpl @Inject constructor(
+class LastFMProviderImpl @Inject constructor(
     private val caller: Caller
-): LastFMRepository {
+): LastFMProvider {
 
     override fun saveToken(token: String) {
         TODO("Not yet implemented")

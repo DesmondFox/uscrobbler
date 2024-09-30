@@ -6,9 +6,7 @@ import kotlinx.serialization.Serializable
 object ConnectPageObject
 
 @Serializable
-object LastFMLoginScreenObject {
-    var token: String = ""
-}
+object LastFMLoginScreenObject
 
 @Serializable
 object HomeScreenObject

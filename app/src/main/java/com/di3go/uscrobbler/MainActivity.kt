@@ -10,8 +10,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import androidx.navigation.navDeepLink
-import com.di3go.uscrobbler.screens.HomeScreen
 import com.di3go.uscrobbler.screens.connect.ConnectPage
+import com.di3go.uscrobbler.screens.home.HomeScreen
 import com.di3go.uscrobbler.screens.lastfm_login.LastFMLoginScreen
 import com.di3go.uscrobbler.ui.theme.UscrobblerTheme
 import dagger.hilt.android.AndroidEntryPoint

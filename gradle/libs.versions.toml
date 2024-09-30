@@ -14,6 +14,7 @@ serialization = "1.6.3"
 hilt = "2.49"
 hilt-navigation-compose = "1.2.0"
 compose = "1.7.2"
+security-crypto = "1.1.0-alpha06"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -36,6 +37,7 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 dagger-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
+security-crypto = { group = "androidx.security", name = "security-crypto-ktx", version.ref = "security-crypto" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

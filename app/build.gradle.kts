@@ -86,6 +86,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.dagger.hilt.android)
     implementation(libs.hilt.navigation.compose)
+    implementation(libs.security.crypto)
 
     kapt(libs.dagger.hilt.android.compiler)
     project(":lastfm")

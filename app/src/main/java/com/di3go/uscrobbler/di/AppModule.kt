@@ -1,7 +1,7 @@
 package com.di3go.uscrobbler.di
 
-import com.di3go.uscrobbler.LastFMRepository
-import com.di3go.uscrobbler.LastFMRepositoryImpl
+import com.di3go.uscrobbler.data.providers.LastFMProvider
+import com.di3go.uscrobbler.data.providers.LastFMProviderImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -13,8 +13,8 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
     @Provides
-    fun provideLastFMRepositoryImpl(): LastFMRepository {
-        return LastFMRepositoryImpl(
+    fun provideLastFMRepositoryImpl(): LastFMProvider {
+        return LastFMProviderImpl(
             provideLastFMCaller()
         )
     }

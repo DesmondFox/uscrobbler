@@ -7,15 +7,20 @@ import javax.inject.Singleton
 
 interface LastFMProvider {
     fun saveToken(token: String)
+
+    fun getToken(): String?
 }
 
 @Singleton
 class LastFMProviderImpl @Inject constructor(
     private val caller: Caller,
     private val securedPrefsRepository: SecuredPrefsRepository
-): LastFMProvider {
-
+) : LastFMProvider {
     override fun saveToken(token: String) {
-        TODO("Not yet implemented")
+        securedPrefsRepository.saveToken(token)
+    }
+
+    override fun getToken(): String? {
+        return securedPrefsRepository.getToken()
     }
 }

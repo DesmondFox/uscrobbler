@@ -20,6 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.di3go.uscrobbler.HomeScreenObject
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -36,7 +37,7 @@ fun LastFMLoginScreen(navController: NavController) {
     }
 
     if (isTokenSaved.value) {
-        navController.navigate("home")
+        navController.navigate(HomeScreenObject)
     }
 
     SavingTokenScreen()

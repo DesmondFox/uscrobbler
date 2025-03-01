@@ -1,5 +1,6 @@
 package com.di3go.uscrobbler.data.providers
 
+import com.di3go.uscrobbler.data.mappers.LastFMUserMapper
 import com.di3go.uscrobbler.data.repositories.SecuredPrefsRepository
 import de.umass.lastfm.Caller
 import javax.inject.Inject
@@ -14,7 +15,8 @@ interface LastFMProvider {
 @Singleton
 class LastFMProviderImpl @Inject constructor(
     private val caller: Caller,
-    private val securedPrefsRepository: SecuredPrefsRepository
+    private val securedPrefsRepository: SecuredPrefsRepository,
+    private val lastFMMapper: LastFMUserMapper
 ) : LastFMProvider {
     override fun saveToken(token: String) {
         securedPrefsRepository.saveToken(token)

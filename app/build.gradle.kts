@@ -15,12 +15,12 @@ apikeyProperties.load(FileInputStream(apikeyPropertiesFile))
 
 android {
     namespace = "com.di3go.uscrobbler"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.di3go.uscrobbler"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -87,6 +87,15 @@ dependencies {
     implementation(libs.dagger.hilt.android)
     implementation(libs.hilt.navigation.compose)
     implementation(libs.security.crypto)
+
+    annotationProcessor(libs.room.compiler)
+    implementation(libs.room.runtime)
+    implementation(libs.room.paging)
+    implementation(libs.room)
+
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.gson)
 
     kapt(libs.dagger.hilt.android.compiler)
     project(":lastfm")

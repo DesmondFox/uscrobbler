@@ -1,6 +1,7 @@
 package com.di3go.uscrobbler.di
 
 import android.content.Context
+import com.di3go.uscrobbler.data.mappers.LastFMUserMapper
 import com.di3go.uscrobbler.data.providers.LastFMProvider
 import com.di3go.uscrobbler.data.providers.LastFMProviderImpl
 import com.di3go.uscrobbler.data.repositories.SecuredPrefsRepository
@@ -19,11 +20,13 @@ import javax.inject.Singleton
 object AppModule {
     @Provides
     fun provideLastFMProviderImpl(
-        @ApplicationContext context: Context
+        @ApplicationContext context: Context,
+        lastFMUserMapper: LastFMUserMapper
     ): LastFMProvider {
         return LastFMProviderImpl(
             provideLastFMCaller(),
-            provideSecuredPrefsRepository(context)
+            provideSecuredPrefsRepository(context),
+            lastFMUserMapper,
         )
     }
 

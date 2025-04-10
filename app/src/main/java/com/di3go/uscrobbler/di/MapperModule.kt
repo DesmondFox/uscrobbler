@@ -1,4 +1,4 @@
-package com.di3go.uscrobbler.di.mappers
+package com.di3go.uscrobbler.di
 
 import com.di3go.uscrobbler.data.apis.LastFMUserApi
 import com.di3go.uscrobbler.data.mappers.LastFMUserMapper

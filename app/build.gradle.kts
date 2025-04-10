@@ -7,6 +7,7 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.compose.compiler)
 }
 
 val apikeyPropertiesFile = rootProject.file("keys.properties")
@@ -19,7 +20,7 @@ android {
 
     defaultConfig {
         applicationId = "com.di3go.uscrobbler"
-        minSdk = 26
+        minSdk = 29
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -96,6 +97,8 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.retrofit.gson)
     implementation(libs.gson)
+
+    implementation(libs.accompanist.permissions)
 
     kapt(libs.dagger.hilt.android.compiler)
     project(":lastfm")

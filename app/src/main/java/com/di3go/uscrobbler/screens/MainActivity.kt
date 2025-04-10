@@ -1,6 +1,7 @@
 package com.di3go.uscrobbler.screens
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.slideInHorizontally
@@ -25,6 +26,9 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val url = intent.data
+        Log.d("MainActivity", "URL: $url")
 
         setContent {
             val navController = rememberNavController()

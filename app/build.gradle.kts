@@ -4,6 +4,7 @@ import java.util.Properties
 plugins {
     id("kotlin-kapt")
     alias(libs.plugins.android.application)
+    id("kotlin-parcelize")
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.kotlinx.serialization)

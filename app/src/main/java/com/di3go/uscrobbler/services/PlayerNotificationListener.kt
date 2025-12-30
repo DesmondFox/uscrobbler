@@ -1,4 +1,4 @@
-package com.di3go.uscrobbler
+package com.di3go.uscrobbler.services
 
 import android.app.Notification
 import android.media.MediaMetadata
@@ -8,8 +8,6 @@ import android.media.session.PlaybackState
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.util.Log
-import android.widget.Toast
-import kotlin.math.log
 
 class PlayerNotificationListener : NotificationListenerService() {
     private val musicAppsPackageNames = listOf(

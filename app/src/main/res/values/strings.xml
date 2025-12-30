@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">uscrobbler</string>
     <string name="playback_monitor">Playback Monitor</string>
+    <string name="now_playing">Now playing</string>
 </resources>
